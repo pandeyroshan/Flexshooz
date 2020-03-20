@@ -1,4 +1,4 @@
-# Flexshooz
+# Flexshooz ![Flexshooz](https://user-images.githubusercontent.com/16616543/38898466-1e4c838c-4263-11e8-9a46-816ae3d11328.png)
 Flexshooz, is an E Commerce application with intermediary distribution approach which makes it less prone to cyber attacks.
 
 ## Steps to install 
