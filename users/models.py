@@ -2,6 +2,7 @@ from django.db import models
 from management.models import University
 from django.contrib.auth.models import User
 from store.models import Product
+
 # Create your models here
 
 
