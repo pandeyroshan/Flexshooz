@@ -17,6 +17,8 @@ urlpatterns = [
     path('add_to_wishlist/<int:p_id>',store_view.add_to_wishlist,name='add_to_wishlist'),
     path('remove_from_cart/<int:p_id>',store_view.remove_from_cart,name='remove_from_wishlist'),
     path('remove_from_wishlist/<int:p_id>',store_view.remove_from_wishlist,name='remove_from_wishlist'),
+    path('cart/',store_view.get_cart,name='cart'),
+    path('remove/<int:id>',store_view.remove_from_cart,name='remove_cart')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
