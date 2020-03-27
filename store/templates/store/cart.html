@@ -1,0 +1,149 @@
+{% extends 'store/base.html'%}
+
+{%block content%}
+
+    <!-- Start Banner Area -->
+    <section class="banner-area organic-breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+                <div class="col-first">
+                    <h1>Shopping Cart</h1>
+                    <nav class="d-flex align-items-center">
+                        <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="category.html">Cart</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Area -->
+
+    <!--================Cart Area =================-->
+    <section class="cart_area">
+        <div class="container">
+            <div class="cart_inner">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product</th>
+                                <th scope="col">Actual Price</th>
+                                <th scope="col">Current Price</th>
+                                <th scope="col">Remove</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {%for item in items%}
+                            <tr>
+                                <td>
+                                    <div class="media">
+                                        <div class="d-flex">
+                                            <img src="{{item.img1.url}}" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <h5 class="text-muted">{{item.fake_price}}/-</h5>
+                                </td>
+                                <td>
+                                    <h5 class="text-dark">{{item.price}}/-</h5>
+                                </td>
+                                <td>
+                                    <a href="/remove/{{item.id}}">&#10540;</a>
+                                </td>
+                                <td>
+                                    <h5>{{item.price}}/-</h5>
+                                </td>
+                            </tr>
+                            {%endfor%}
+                            <tr class="bottom_button">
+                                <td>
+                                    <a class="gray_btn" href="#">Update Cart</a>
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <div class="cupon_text d-flex align-items-center">
+                                        <input type="text" placeholder="Coupon Code">
+                                        <a class="primary-btn" href="#">Apply</a>
+                                        <a class="gray_btn" href="#">Remove</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <h5>Subtotal</h5>
+                                </td>
+                                <td>
+                                    <h5>{{price}}/-</h5>
+                                </td>
+                            </tr>
+                            <tr class="shipping_area">
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <h5>Shipping</h5>
+                                </td>
+                                <td>
+                                    <div class="shipping_box">
+                                        <ul class="list">
+                                            <li><a href="#">Free Shipping</a></li>
+                                        </ul>
+                                        <h6>Calculate Shipping <i class="fa fa-caret-down" aria-hidden="true"></i></h6>
+                                        <select class="shipping_select">
+                                            <option value="1">Bangladesh</option>
+                                            <option value="2">India</option>
+                                            <option value="4">Pakistan</option>
+                                        </select>
+                                        <select class="shipping_select">
+                                            <option value="1">Select a State</option>
+                                            <option value="2">Select a State</option>
+                                            <option value="4">Select a State</option>
+                                        </select>
+                                        <input type="text" placeholder="Postcode/Zipcode">
+                                        <a class="gray_btn" href="#">Update Details</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="out_button_area">
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                    <div class="checkout_btn_inner d-flex align-items-center">
+                                        <a class="primary-btn" href="#">Proceed to checkout</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{%endblock%}
